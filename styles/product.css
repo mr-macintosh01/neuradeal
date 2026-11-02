@@ -471,6 +471,16 @@ tbody tr:last-child td {
     margin: 0;
 }
 
+.footer .legal {
+    max-width: 40rem;
+    margin: 1.15rem auto 0;
+    color: rgba(255, 255, 255, .4);
+    font-size: .78rem;
+    font-weight: 300;
+    letter-spacing: .03em;
+    line-height: 1.65;
+}
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;

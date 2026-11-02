@@ -31,11 +31,17 @@
 }
 
 .site-footer {
-    padding: 2.5rem 1.5rem 2.75rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    column-gap: 4rem;
+    align-items: start;
+    width: min(68rem, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 2.75rem 0 3rem;
     border-top: 1px solid rgba(255, 255, 255, .15);
     color: rgba(255, 255, 255, .55);
     font-size: .95rem;
-    text-align: center;
+    text-align: left;
 }
 
 .site-footer h2 {
@@ -47,11 +53,10 @@
 
 .site-footer ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .6rem 1.75rem;
-    max-width: 62rem;
-    margin: 0 auto 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .45rem;
+    margin: 0;
     padding: 0;
     border-left: 0;
     font-size: inherit;
@@ -75,7 +80,46 @@
     margin: 0;
 }
 
-@media screen and (max-width: 800px) {    
+.site-footer .footer-meta {
+    align-self: stretch;
+    padding-left: 3rem;
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.site-footer .legal {
+    max-width: 28rem;
+    margin: 1.15rem 0 0;
+    color: rgba(255, 255, 255, .4);
+    font-size: .78rem;
+    font-weight: 300;
+    letter-spacing: .03em;
+    line-height: 1.65;
+}
+
+@media screen and (max-width: 800px) {
+    .site-footer {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        width: min(68rem, calc(100% - 3rem));
+        text-align: center;
+    }
+
+    .site-footer ul {
+        align-items: center;
+    }
+
+    .site-footer .footer-meta {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .15);
+        padding-top: 1.75rem;
+    }
+
+    .site-footer .legal {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     #contacts-content {
         flex-direction: column!important;
     }
