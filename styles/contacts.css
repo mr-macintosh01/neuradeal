@@ -96,6 +96,11 @@
     line-height: 1.65;
 }
 
+.site-footer .legal .registry {
+    display: block;
+    margin-top: .75rem;
+}
+
 @media screen and (max-width: 800px) {
     .site-footer {
         grid-template-columns: 1fr;

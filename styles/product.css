@@ -481,6 +481,11 @@ tbody tr:last-child td {
     line-height: 1.65;
 }
 
+.footer .legal .registry {
+    display: block;
+    margin-top: .75rem;
+}
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;
